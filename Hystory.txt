@@ -1,0 +1,383 @@
+
+gtorres@EZE-6TB0HC2 MINGW64 /C/Users/gtorres/Documents/proyecto1
+$ pwd
+/C/Users/gtorres/Documents/proyecto1
+
+gtorres@EZE-6TB0HC2 MINGW64 /C/Users/gtorres/Documents/proyecto1
+$ git init
+Initialized empty Git repository in C:/Users/gtorres/Documents/Proyecto1/.git/
+
+gtorres@EZE-6TB0HC2 MINGW64 /C/Users/gtorres/Documents/proyecto1 (master)
+$ ls -all
+total 8
+drwxr-xr-x 1 gtorres 1049089 0 mar. 27 16:33 ./
+drwxr-xr-x 1 gtorres 1049089 0 mar. 27 16:27 ../
+drwxr-xr-x 1 gtorres 1049089 0 mar. 27 16:33 .git/
+
+gtorres@EZE-6TB0HC2 MINGW64 /C/Users/gtorres/Documents/proyecto1 (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Prueba.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+gtorres@EZE-6TB0HC2 MINGW64 /C/Users/gtorres/Documents/proyecto1 (master)
+$ git add Prueba.txt
+
+gtorres@EZE-6TB0HC2 MINGW64 /C/Users/gtorres/Documents/proyecto1 (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   Prueba.txt
+
+
+gtorres@EZE-6TB0HC2 MINGW64 /C/Users/gtorres/Documents/proyecto1 (master)
+$ git commit -m "Este es el primer commit"
+[master (root-commit) 1a0df71] Este es el primer commit
+ Committer: TORRES <gtorres@corp.aa2000.com.ar>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 5 insertions(+)
+ create mode 100644 Prueba.txt
+
+gtorres@EZE-6TB0HC2 MINGW64 /C/Users/gtorres/Documents/proyecto1 (master)
+$ git config
+usage: git config [<options>]
+
+Config file location
+    --global              use global config file
+    --system              use system config file
+    --local               use repository config file
+    --worktree            use per-worktree config file
+    -f, --file <file>     use given config file
+    --blob <blob-id>      read config from given blob object
+
+Action
+    --get                 get value: name [value-regex]
+    --get-all             get all values: key [value-regex]
+    --get-regexp          get values for regexp: name-regex [value-regex]
+    --get-urlmatch        get value specific for the URL: section[.var] URL
+    --replace-all         replace all matching variables: name value [value_regex]
+    --add                 add a new variable: name value
+    --unset               remove a variable: name [value-regex]
+    --unset-all           remove all matches: name [value-regex]
+    --rename-section      rename section: old-name new-name
+    --remove-section      remove a section: name
+    -l, --list            list all
+    -e, --edit            open an editor
+    --get-color           find the color configured: slot [default]
+    --get-colorbool       find the color setting: slot [stdout-is-tty]
+
+Type
+    -t, --type <>         value is given this type
+    --bool                value is "true" or "false"
+    --int                 value is decimal number
+    --bool-or-int         value is --bool or --int
+    --path                value is a path (file or directory name)
+    --expiry-date         value is an expiry date
+
+Other
+    -z, --null            terminate values with NUL byte
+    --name-only           show variable names only
+    --includes            respect include directives on lookup
+    --show-origin         show origin of config (file, standard input, blob, command line)
+    --show-scope          show scope of config (worktree, local, global, system, command)
+    --default <value>     with --get, use default value when missing entry
+
+
+gtorres@EZE-6TB0HC2 MINGW64 /C/Users/gtorres/Documents/proyecto1 (master)
+$ git config --list
+diff.astextplain.textconv=astextplain
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+filter.lfs.required=true
+http.sslbackend=openssl
+http.sslcainfo=C:/Program Files/Git/mingw64/ssl/certs/ca-bundle.crt
+core.autocrlf=true
+core.fscache=true
+core.symlinks=false
+pull.rebase=false
+credential.helper=manager
+core.repositoryformatversion=0
+core.filemode=false
+core.bare=false
+core.logallrefupdates=true
+core.symlinks=false
+core.ignorecase=true
+
+gtorres@EZE-6TB0HC2 MINGW64 /C/Users/gtorres/Documents/proyecto1 (master)
+$ git config --global
+usage: git config [<options>]
+
+Config file location
+    --global              use global config file
+    --system              use system config file
+    --local               use repository config file
+    --worktree            use per-worktree config file
+    -f, --file <file>     use given config file
+    --blob <blob-id>      read config from given blob object
+
+Action
+    --get                 get value: name [value-regex]
+    --get-all             get all values: key [value-regex]
+    --get-regexp          get values for regexp: name-regex [value-regex]
+    --get-urlmatch        get value specific for the URL: section[.var] URL
+    --replace-all         replace all matching variables: name value [value_regex]
+    --add                 add a new variable: name value
+    --unset               remove a variable: name [value-regex]
+    --unset-all           remove all matches: name [value-regex]
+    --rename-section      rename section: old-name new-name
+    --remove-section      remove a section: name
+    -l, --list            list all
+    -e, --edit            open an editor
+    --get-color           find the color configured: slot [default]
+    --get-colorbool       find the color setting: slot [stdout-is-tty]
+
+Type
+    -t, --type <>         value is given this type
+    --bool                value is "true" or "false"
+    --int                 value is decimal number
+    --bool-or-int         value is --bool or --int
+    --path                value is a path (file or directory name)
+    --expiry-date         value is an expiry date
+
+Other
+    -z, --null            terminate values with NUL byte
+    --name-only           show variable names only
+    --includes            respect include directives on lookup
+    --show-origin         show origin of config (file, standard input, blob, command line)
+    --show-scope          show scope of config (worktree, local, global, system, command)
+    --default <value>     with --get, use default value when missing entry
+
+
+gtorres@EZE-6TB0HC2 MINGW64 /C/Users/gtorres/Documents/proyecto1 (master)
+$ git config --global user.name "Gustavo Torres"
+
+gtorres@EZE-6TB0HC2 MINGW64 /C/Users/gtorres/Documents/proyecto1 (master)
+$ git config --global user.email "gftorresahoo.com.ar"
+
+gtorres@EZE-6TB0HC2 MINGW64 /C/Users/gtorres/Documents/proyecto1 (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+gtorres@EZE-6TB0HC2 MINGW64 /C/Users/gtorres/Documents/proyecto1 (master)
+$ git commit -m "Este es el primer commit"
+On branch master
+nothing to commit, working tree clean
+
+gtorres@EZE-6TB0HC2 MINGW64 /C/Users/gtorres/Documents/proyecto1 (master)
+$ cat Prueba.txt
+esta es una prueba
+
+de como quedaria  en el git
+
+soy desarrollador
+
+gtorres@EZE-6TB0HC2 MINGW64 /C/Users/gtorres/Documents/proyecto1 (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   Prueba.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+gtorres@EZE-6TB0HC2 MINGW64 /C/Users/gtorres/Documents/proyecto1 (master)
+$ git commit -m "Cambios en el archivo en algo"
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   Prueba.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+gtorres@EZE-6TB0HC2 MINGW64 /C/Users/gtorres/Documents/proyecto1 (master)
+$ git add .
+
+gtorres@EZE-6TB0HC2 MINGW64 /C/Users/gtorres/Documents/proyecto1 (master)
+$ git commit -m "Cambios en el archivo en algo"
+[master 3be94b6] Cambios en el archivo en algo
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+gtorres@EZE-6TB0HC2 MINGW64 /C/Users/gtorres/Documents/proyecto1 (master)
+$ git log Prueba.txt
+commit 3be94b6f783ec770db6648b714f08637468c8e61 (HEAD -> master)
+Author: Gustavo Torres <gftorresahoo.com.ar>
+Date:   Sat Mar 27 16:48:50 2021 -0300
+
+    Cambios en el archivo en algo
+
+commit 1a0df71b1a5b9de422d3545cf2d92d87de2d8aef
+Author: TORRES <gtorres@corp.aa2000.com.ar>
+Date:   Sat Mar 27 16:44:19 2021 -0300
+
+    Este es el primer commit
+
+gtorres@EZE-6TB0HC2 MINGW64 /C/Users/gtorres/Documents/proyecto1 (master)
+$ git show Pruba.txt
+fatal: ambiguous argument 'Pruba.txt': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+gtorres@EZE-6TB0HC2 MINGW64 /C/Users/gtorres/Documents/proyecto1 (master)
+$ git show Prueba.txt
+commit 3be94b6f783ec770db6648b714f08637468c8e61 (HEAD -> master)
+Author: Gustavo Torres <gftorresahoo.com.ar>
+Date:   Sat Mar 27 16:48:50 2021 -0300
+
+    Cambios en el archivo en algo
+
+diff --git a/Prueba.txt b/Prueba.txt
+index a7a4200..bdac4ed 100644
+--- a/Prueba.txt
++++ b/Prueba.txt
+@@ -1,5 +1,5 @@
+ esta es una prueba
+
+-de como quedaria  en el git
++de como quedaria  en el git hoy
+
+-soy desarrollador
++soy desarrollador Senior
+
+gtorres@EZE-6TB0HC2 MINGW64 /C/Users/gtorres/Documents/proyecto1 (master)
+$ git add .
+
+gtorres@EZE-6TB0HC2 MINGW64 /C/Users/gtorres/Documents/proyecto1 (master)
+$ git commit -"Agreamos un cambio"
+error: unknown switch `A'
+usage: git commit [<options>] [--] <pathspec>...
+
+    -q, --quiet           suppress summary after successful commit
+    -v, --verbose         show diff in commit message template
+
+Commit message options
+    -F, --file <file>     read message from file
+    --author <author>     override author for commit
+    --date <date>         override date for commit
+    -m, --message <message>
+                          commit message
+    -c, --reedit-message <commit>
+                          reuse and edit message from specified commit
+    -C, --reuse-message <commit>
+                          reuse message from specified commit
+    --fixup <commit>      use autosquash formatted message to fixup specified commit
+    --squash <commit>     use autosquash formatted message to squash specified commit
+    --reset-author        the commit is authored by me now (used with -C/-c/--amend)
+    -s, --signoff         add Signed-off-by:
+    -t, --template <file>
+                          use specified template file
+    -e, --edit            force edit of commit
+    --cleanup <mode>      how to strip spaces and #comments from message
+    --status              include status in commit message template
+    -S, --gpg-sign[=<key-id>]
+                          GPG sign commit
+
+Commit contents options
+    -a, --all             commit all changed files
+    -i, --include         add specified files to index for commit
+    --interactive         interactively add files
+    -p, --patch           interactively add changes
+    -o, --only            commit only specified files
+    -n, --no-verify       bypass pre-commit and commit-msg hooks
+    --dry-run             show what would be committed
+    --short               show status concisely
+    --branch              show branch information
+    --ahead-behind        compute full ahead/behind values
+    --porcelain           machine-readable output
+    --long                show status in long format (default)
+    -z, --null            terminate entries with NUL
+    --amend               amend previous commit
+    --no-post-rewrite     bypass post-rewrite hook
+    -u, --untracked-files[=<mode>]
+                          show untracked files, optional modes: all, normal, no. (Default: all)
+    --pathspec-from-file <file>
+                          read pathspec from file
+    --pathspec-file-nul   with --pathspec-from-file, pathspec elements are separated with NUL character
+
+
+gtorres@EZE-6TB0HC2 MINGW64 /C/Users/gtorres/Documents/proyecto1 (master)
+$ git commit -m "Agregamos un cambio nuevo"
+[master 7f3195b] Agregamos un cambio nuevo
+ 1 file changed, 2 insertions(+)
+
+gtorres@EZE-6TB0HC2 MINGW64 /C/Users/gtorres/Documents/proyecto1 (master)
+$ git add .
+
+gtorres@EZE-6TB0HC2 MINGW64 /C/Users/gtorres/Documents/proyecto1 (master)
+$ git commit -m "Agregamos otro cambio"
+[master 3f23e76] Agregamos otro cambio
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+gtorres@EZE-6TB0HC2 MINGW64 /C/Users/gtorres/Documents/proyecto1 (master)
+$ git log Prueba.txt
+commit 3f23e7619819f4fa19e0d18868df2f316ffd6e01 (HEAD -> master)
+Author: Gustavo Torres <gftorresahoo.com.ar>
+Date:   Sat Mar 27 16:54:26 2021 -0300
+
+    Agregamos otro cambio
+
+commit 7f3195b5dd39ca8099dd452da69caf6740528f6e
+Author: Gustavo Torres <gftorresahoo.com.ar>
+Date:   Sat Mar 27 16:53:44 2021 -0300
+
+    Agregamos un cambio nuevo
+
+commit 3be94b6f783ec770db6648b714f08637468c8e61
+Author: Gustavo Torres <gftorresahoo.com.ar>
+Date:   Sat Mar 27 16:48:50 2021 -0300
+
+    Cambios en el archivo en algo
+
+commit 1a0df71b1a5b9de422d3545cf2d92d87de2d8aef
+Author: TORRES <gtorres@corp.aa2000.com.ar>
+Date:   Sat Mar 27 16:44:19 2021 -0300
+
+    Este es el primer commit
+
+gtorres@EZE-6TB0HC2 MINGW64 /C/Users/gtorres/Documents/proyecto1 (master)
+$ git show Prueba.txt
+commit 3f23e7619819f4fa19e0d18868df2f316ffd6e01 (HEAD -> master)
+Author: Gustavo Torres <gftorresahoo.com.ar>
+Date:   Sat Mar 27 16:54:26 2021 -0300
+
+    Agregamos otro cambio
+
+diff --git a/Prueba.txt b/Prueba.txt
+index f293c54..ca3addc 100644
+--- a/Prueba.txt
++++ b/Prueba.txt
+@@ -4,4 +4,6 @@ de como quedaria  en el git hoy
+
+ soy desarrollador Senior
+
+-esta muy bueno esto
+\ No newline at end of file
++esta muy bueno esto
++
++hoy es sero
+\ No newline at end of file
+
+gtorres@EZE-6TB0HC2 MINGW64 /C/Users/gtorres/Documents/proyecto1 (master)
